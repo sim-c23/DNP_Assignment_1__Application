@@ -11,7 +11,7 @@ public class UsersController : ControllerBase
 {
     private readonly IUserLogic userLogic;
 
-    public UserController(IUserLogic userLogic)
+    public UsersController(IUserLogic userLogic)
     {
         this.userLogic = userLogic;
     }
