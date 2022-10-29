@@ -15,6 +15,24 @@ public class UsersController : ControllerBase
     {
         this.userLogic = userLogic;
     }
+    
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<User>>> GetAsync([FromQuery] string? username)
+    {
+        try
+        {
+            SearchUserParametersDto parameters = new(username);
+            
+            
+            IEnumerable<User> users = await userLogic.GetAsync(parameters);
+            return Ok(users);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
     [HttpPost]
     public async Task<ActionResult<User>> CreateAsync(UserCreationDto dto)
     {
@@ -28,5 +46,6 @@ public class UsersController : ControllerBase
             Console.WriteLine(e);
             return StatusCode(500, e.Message);
         }
+        
     }
 }
