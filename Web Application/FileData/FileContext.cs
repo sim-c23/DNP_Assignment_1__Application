@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using Shared.Models;
+using Domain.Models;
 
 namespace FileData;
 
@@ -29,21 +29,20 @@ public class FileContext
     private void LoadData()
     {
         if (dataContainer != null) return;
-
+        
         if (!File.Exists(filePath))
         {
-            dataContainer = new()
+            dataContainer = new ()
             {
                 Todos = new List<Todo>(),
                 Users = new List<User>()
             };
             return;
         }
-
         string content = File.ReadAllText(filePath);
         dataContainer = JsonSerializer.Deserialize<DataContainer>(content);
     }
-    
+
     public void SaveChanges()
     {
         string serialized = JsonSerializer.Serialize(dataContainer, new JsonSerializerOptions
@@ -53,7 +52,4 @@ public class FileContext
         File.WriteAllText(filePath, serialized);
         dataContainer = null;
     }
-
-
-
 }
