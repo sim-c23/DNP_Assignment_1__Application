@@ -9,4 +9,12 @@ public interface ITodoDao
 {
     Task<Todo> CreateAsync(Todo todo);
     public Task<IEnumerable<Todo>> GetAsync(SearchTodoParametersDto searchParams);
+    
+    Task<Todo> GetByIdAsync(int todoId);
+    
+    Task UpdateAsync(Todo toUpdate);
+
+    Task DeleteAsync(int id);
+
 }
+    
