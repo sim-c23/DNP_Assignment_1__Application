@@ -6,6 +6,7 @@
 @inject ITodoService todoService
 @inject NavigationManager navMgr
 
+
 <div class="card">
     @if (users == null)
     {
@@ -42,6 +43,10 @@
     }
 </div>
 
+<Modal ShowModal="showModal">
+    <p>Click here</p>
+    <button @onclick="@Proceed">Done</button>
+</Modal>
 
 @code {
     private IEnumerable<User>? users;
@@ -49,6 +54,8 @@
     private string todoTitle = "";
 
     private string msg = "";
+
+    private bool showModal;
 
     protected override async Task OnInitializedAsync()
     {
@@ -82,7 +89,7 @@
         {
             TodoCreationDto dto = new((int)selectedUserId, todoTitle);
             await todoService.CreateAsync(dto);
-            navMgr.NavigateTo("/");
+            showModal = true;
         }
         catch (Exception e)
         {
@@ -90,4 +97,11 @@
             msg = e.Message;
         }
     }
+
+    private void Proceed()
+    {
+        showModal = false;
+        navMgr.NavigateTo("/ViewTodos");
+    }
+
 }

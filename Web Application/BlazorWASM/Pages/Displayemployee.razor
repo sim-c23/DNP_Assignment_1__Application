@@ -1,0 +1,22 @@
+﻿@page "/Displayemployee"
+
+<h3>DisplayEmployee</h3>
+<p>Employee Id: @Id</p>
+<p>Department: @Department</p>
+<p>Employee First Name: @FName</p>
+<p>Employee Last Name: @LName</p>
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int? Id { get; set; }
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int? Department { get; set; }
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? LName { get; set; }
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? FName { get; set; }
+}
+
