@@ -1,7 +1,6 @@
-﻿<CascadingAuthenticationState> @*Hver side/komponent i din app kan nu anmode om oplysninger om, hvem der er logget ind, hvis nogen.*@
-<Router AppAssembly="@typeof(App).Assembly">
+﻿<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
         <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
     </Found>
     <NotFound>
@@ -11,4 +10,3 @@
         </LayoutView>
     </NotFound>
 </Router>
-</CascadingAuthenticationState> @*---*@
