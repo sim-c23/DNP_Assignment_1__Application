@@ -8,8 +8,10 @@ using BlazorWASM.StateContainer;
 using BlazorWASM.StateContainer;
 using HttpClients.ClientInterfaces;
 using HttpClients.Implementations;
+using Microsoft.AspNetCore.Components.Authorization;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
@@ -19,15 +21,12 @@ builder.Services.AddScoped<ITodoService, TodoHttpClient>();
 builder.Services.AddScoped<CounterStateContainer>();
 
 
-
-await builder.Build().RunAsync();
-
 var builder = WebApplication.CreateBuilder(args);
+// builder.Services.AddSingleton<WeatherForecastService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthenticationStateProvider>();
 builder.Services.AddScoped<IAuthManager, AuthManagerImpl>();
 builder.Services.AddScoped<IUserService, InMemoryUserService>();
@@ -50,5 +49,6 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+await builder.Build().RunAsync();
 
 app.Run();
