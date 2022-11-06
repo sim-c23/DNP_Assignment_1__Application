@@ -1,0 +1,12 @@
+﻿@page "/"
+@namespace BLazorWASM.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<component type="typeof(App)" render-mode="Server"/>
+@*Men vi skal ændre gengivelsestilstanden fra ServerPrerendered til Server. 
+Dette skyldes, at javascript kun er tilgængeligt, når vi ikke er præender, 
+og vi har brug for dette senere.
+Hvis vi ikke gør dette, får vi senere en forklaring om, at javascript interop ikke er tilgængelig.*@
