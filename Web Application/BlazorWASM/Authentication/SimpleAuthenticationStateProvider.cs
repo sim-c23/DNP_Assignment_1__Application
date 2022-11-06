@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Components.Auhtorization;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace BlazorWASM.Authentication;
 
