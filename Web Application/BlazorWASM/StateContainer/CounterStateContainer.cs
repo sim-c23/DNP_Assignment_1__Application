@@ -2,7 +2,6 @@
 
 public class CounterStateContainer
 {
-    // todo skal denne klasse være med
     public Action<int> OnChange { get; set; }
 
     private int count = 0;
@@ -12,8 +11,6 @@ public class CounterStateContainer
         count++;
         OnChange?.Invoke(count);
     }
-    
-    //todo logo favicon2.con ligger under wwwroot mappen
     
     //todo Det skal måske skrive end i Properties launchSettings.json
     /*

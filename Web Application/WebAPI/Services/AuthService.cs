@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Shared.Models;
 
-
-
 namespace WebApi.Services;
 
 public class AuthService : IAuthService
