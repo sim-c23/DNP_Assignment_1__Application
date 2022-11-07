@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using System.Text.Json; /*todo hvad skal denne her*/
+using System.Text.Json; 
 using BlazorWasm.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 

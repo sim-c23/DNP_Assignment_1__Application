@@ -1,8 +1,6 @@
 ﻿using System.Security.Claims;
 using Microsoft.Extensions.DependencyInjection;
 
-//using Microsoft.Extensions.DependencyInjection;
-
 namespace Shared.Auth;
 
 public static class AuthorizationPolicies

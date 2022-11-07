@@ -2,8 +2,7 @@
 
 @using global::Shared.DTOs
 @using HttpClient.ClientInterfaces
-@inject IUserService userService;
-@*todo jeg har ikke lavet det here*@
+@inject IUserService userServiec;
 <div class="card">
     <h3>Create User</h3>
     <div class="form-group field">
@@ -30,7 +29,7 @@
 
         try
         {
-            await userService.Create(new UserCreationDto(username));
+            await userServiec.Create(new UserCreationDto(username));
             username = "";
             resultMsg = "User successfully created";
             color = "green";
