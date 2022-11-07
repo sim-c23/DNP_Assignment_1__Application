@@ -48,4 +48,8 @@
       <_ContentIncludedByDefault Remove="wwwroot\css\styles.css" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Remove="Pages\Counter.razor" />
+    </ItemGroup>
+
 </Project>
