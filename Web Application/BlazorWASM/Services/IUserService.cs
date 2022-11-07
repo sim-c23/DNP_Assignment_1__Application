@@ -1,6 +1,6 @@
-﻿using Blazor_Login.Model;
+﻿using BlazorWASM.Model;
 
-namespace Blazor_Login.Services;
+namespace BlazorWASM.Services;
 
 public interface IUserService
 {

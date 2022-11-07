@@ -12,6 +12,7 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.8" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.8" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.8" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -45,6 +46,14 @@
       <_ContentIncludedByDefault Remove="wwwroot\index.html" />
       <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
       <_ContentIncludedByDefault Remove="wwwroot\css\styles.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Services\InMemoryUserService.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Pages\Error.razor" />
     </ItemGroup>
 
 </Project>

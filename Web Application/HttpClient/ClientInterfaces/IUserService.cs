@@ -1,7 +1,7 @@
-﻿using Domain.DTOs;
-using Domain.Models;
+﻿using Shared.DTOs;
+using Shared.Models;
 
-namespace HttpClients.ClientInterfaces;
+namespace HttpClient.ClientInterfaces;
 
 public interface IUserService
 {

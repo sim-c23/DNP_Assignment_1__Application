@@ -1,8 +1,9 @@
 ﻿@page "/ViewTodos"
-@using Domain.Models
-@using HttpClients.ClientInterfaces
 @using UIComponents
-@using Domain.DTOs
+@*@using Domain.DTOs*@
+@using global::Shared.DTOs
+@using global::Shared.Models
+@using HttpClient.ClientInterfaces
 @inject ITodoService todoService
 @inject NavigationManager navMgr
 
@@ -88,46 +89,6 @@ else
     <label style="color: red">@msg</label>
 }
 
-@*<div>
-    <button @onclick="LoadTodos">Load</button>
-</div>
-
-@if (todos == null)
-{
-}
-else if (!todos.Any())
-{
-    <p>No Todos to display</p>
-}
-else
-{
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Todo ID</th>
-            <th>Owner ID</th>
-            <th>Title</th>
-            <th>Completed?</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in todos)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Owner.UserName</td>
-                <td>@item.Title</td>
-                <td>@item.IsCompleted</td>
-            </tr>
-        }
-        </tbody>
-    </table>
-}
-@if (!string.IsNullOrEmpty(msg))
-{
-    <label style="color: red">@msg</label>
-}*@
-
 
 @code
 
@@ -193,29 +154,3 @@ else
         }
     }
 }
-
-
-
-
-
-@*{
-    private IEnumerable<Todo>? todos;
-    private string msg = "";
-
-    
-    
-    private async Task LoadTodos()
-    {
-        try
-        {
-            todos = await todoService.GetAsync(null, null, null, null);
-        }
-        
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            msg = e.Message;
-        }
-      
-    }
-}*@

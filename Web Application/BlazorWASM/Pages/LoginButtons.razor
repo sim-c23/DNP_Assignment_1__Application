@@ -5,6 +5,20 @@
 
 @*// view stuff here later..*@
 
+@code {
+
+    private void Login()
+    {
+        navMgr.NavigateTo("/Login");
+    }
+
+    private async Task Logout()
+    {
+        await authManager.LogoutAsync();
+        navMgr.NavigateTo("/");
+    }
+}
+
 <AuthorizeView>
     <Authorized>
         <img class="icon" src="img/Logout.png" @onclick="Logout"/>
@@ -14,16 +28,3 @@
     </NotAuthorized>
 </AuthorizeView>
 
-@code {
-
-    private async Task Logout()
-    {
-        await authManager.LogoutAsync();
-        navMgr.NavigateTo("/");
-    }
-
-    private void Login()
-    {
-        navMgr.NavigateTo("/Login");
-    }
-}

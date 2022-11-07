@@ -1,5 +1,4 @@
-﻿namespace Blazor_Login.Model;
-
+﻿namespace BlazorWASM.Model;
 public class User
 {
     public string Username { get; set; }
@@ -11,7 +10,22 @@ public class User
     public string Name { get; set; }
     public int Age { get; set; }
 
-    public User(string username, string password, string role, string email, int securityLevel, string domain, string name, int age)
+    /*
+    // I Troels opgave er dette ikke med.
+    public string Name { get;  set; }
+
+    public string Password { get;  set; }
+
+    public string Role { get;  set; }
+
+    public int SecurityLevel { get;  set; }
+    public int BirthYear { get;  set; }
+
+    public string Domain { get; set; }
+     */
+    
+    //Den er ikke med i troels opgave
+    /*public User(string username, string password, string role, string email, int securityLevel, string domain, string name, int age)
     {
         Username = username;
         Password = password;
@@ -21,5 +35,5 @@ public class User
         Domain = domain;
         Name = name;
         Age = age;
-    }
+    }*/
 }

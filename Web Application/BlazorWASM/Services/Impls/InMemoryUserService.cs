@@ -1,6 +1,6 @@
-﻿using Blazor_Login.Model;
+﻿using BlazorWASM.Model;
 
-namespace Blazor_Login.Services.Impls;
+namespace BlazorWASM.Services.Impls;
 
 public class InMemoryUserService : IUserService
 {
@@ -12,8 +12,11 @@ public class InMemoryUserService : IUserService
 
     private List<User> users = new()
     {
-        new User("Troels", "Troels1234", "Teacher", "ds@34.dk", 1986,"via","Troels",23),
-        new User("Maria", "oneTwo3FOUR", "Student", "ds@37.dk", 2001,"via","Nina",22),
-        new User("Anne", "password", "HeadOfDepartment", "ds@74.dk", 1975,"google","Anne",90)        
+        new User
+        {
+            Username = "Troels", Password = "Troels1234", Role = "Teacher", Email = "ds@34.dk", SecurityLevel = 5, Domain = "via", Name ="Troels", Age = 23
+        },
+        new User { Username = "Maria", Password = "oneTwo3FOUR", Role = "Student", Email = "ds@37.dk", SecurityLevel = 1, Domain = "via", Name = "Nina", Age = 22 },
+        new User { Username = "Anne", Password = "password", Role = "HeadOfDepartment", Email = "ds@74.dk", SecurityLevel = 5, Domain = "google", Name = "Anne", Age = 90 }        
     };
 }

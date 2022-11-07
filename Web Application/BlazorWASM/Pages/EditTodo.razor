@@ -1,10 +1,11 @@
 ﻿@page "/EditTodo/{id:int}"
-@using Domain.DTOs
-@using Domain.Models
-@using HttpClients.ClientInterfaces
+@using global::Shared.DTOs
+@using global::Shared.Models
+@using HttpClient.ClientInterfaces
 @inject ITodoService todoService
 @inject IUserService userService
 @inject NavigationManager navMgr
+@*todo jeg har ikke lavet det here*@
 
 <h3>EditTodo</h3>
 

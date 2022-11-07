@@ -1,16 +1,16 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
-using Domain.DTOs;
-using Domain.Models;
-using HttpClients.ClientInterfaces;
+using HttpClient.ClientInterfaces;
+using Shared.DTOs;
+using Shared.Models;
 
-namespace HttpClients.Implementations;
+namespace HttpClient.Implementations;
 
 public class UserHttpClient : IUserService
 {
-    private readonly HttpClient client;
+    private readonly System.Net.Http.HttpClient client;
 
-    public UserHttpClient(HttpClient client)
+    public UserHttpClient(System.Net.Http.HttpClient client)
     {
         this.client = client;
     }

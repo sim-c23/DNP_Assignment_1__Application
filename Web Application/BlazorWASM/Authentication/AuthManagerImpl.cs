@@ -1,11 +1,11 @@
 ﻿using System.Security.Claims;
 using System.Text.Json;
-using Blazor_Login.Model;
-using Blazor_Login.Services;
+using BlazorWASM.Model;
+using BlazorWASM.Services;
 using Microsoft.JSInterop;
 namespace BlazorWASM.Authentication;
 
-public class AuthManagerImpl
+public class AuthManagerImpl : IAuthManager
 {
     /*---------------- Fields and constructor ----------------*/
     public Action<ClaimsPrincipal> OnAuthStateChanged { get; set; } = null!; // assigning to null! to suppress null warning.

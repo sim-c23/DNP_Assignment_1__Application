@@ -1,4 +1,4 @@
-﻿namespace Domain.DTOs;
+﻿namespace Shared.DTOs;
 
 public class TodoBasicDto
 {
