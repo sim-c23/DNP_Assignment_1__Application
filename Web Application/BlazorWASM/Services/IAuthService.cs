@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using Domain.Models;
+using Shared.Models;
 
 namespace BlazorWasm.Services;
 

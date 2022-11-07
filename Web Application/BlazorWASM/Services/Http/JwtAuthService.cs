@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-using Domain.Models;
+using Shared.Models;
 using Shared.Dtos;
 
 
@@ -10,7 +10,7 @@ namespace BlazorWasm.Services.Http;
 
 public class JwtAuthService : IAuthService
 {
-    private readonly HttpClient client = new ();
+    private readonly System.Net.Http.HttpClient client = new ();
 
     // this private variable for simple caching
     public static string? Jwt { get; private set; } = "";
