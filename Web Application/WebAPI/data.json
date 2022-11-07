@@ -2,22 +2,37 @@
   "Users": [
     {
       "Id": 1,
-      "UserName": "John"
+      "UserName": "John",
+      "Password": null,
+      "Email": null,
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
     },
     {
       "Id": 2,
-      "UserName": "1234"
+      "UserName": "1234",
+      "Password": null,
+      "Email": null,
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
+    },
+    {
+      "Id": 3,
+      "UserName": "hej123",
+      "Password": null,
+      "Email": null,
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
     }
   ],
-  "Todos": [
-    {
-      "Id": 2,
-      "Owner": {
-        "Id": 2,
-        "UserName": "1234"
-      },
-      "Title": "hej med dig",
-      "IsCompleted": true
-    }
-  ]
+  "Todos": []
 }
