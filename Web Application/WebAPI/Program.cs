@@ -41,7 +41,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 
 // adding policies
-/*AuthorizationPolicies.AddPolicies(builder.Services);*/
+AuthorizationPolicies.AddPolicies(builder.Services);
 
 var app = builder.Build();
 

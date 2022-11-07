@@ -1,11 +1,13 @@
 ﻿using System.Security.Claims;
 using Microsoft.Extensions.DependencyInjection;
 
+//using Microsoft.Extensions.DependencyInjection;
+
 namespace Shared.Auth;
 
 public static class AuthorizationPolicies
 {
-    /*public static void AddPolicies(IServiceCollection services)
+    public static void AddPolicies(IServiceCollection services)
     {
         services.AddAuthorizationCore(options =>
         {
@@ -26,5 +28,5 @@ public static class AuthorizationPolicies
                     return int.Parse(levelClaim.Value) >= 2;
                 }));
         });
-    }*/
+    }
 }
