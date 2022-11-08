@@ -21,7 +21,7 @@ builder.Services.AddScoped<CounterStateContainer>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
 builder.Services.AddScoped<IAuthService, JwtAuthService>();
 
-AuthorizationPolicies.AddPolicies(builder.Services);
+// AuthorizationPolicies.AddPolicies(builder.Services);
 
 
 builder.Services.AddScoped(sp => new System.Net.Http.HttpClient());
