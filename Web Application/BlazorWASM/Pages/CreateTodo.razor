@@ -7,47 +7,55 @@
 @inject NavigationManager navMgr
 
 
-
-<div class="card">
-    @if (users == null)
-    {
-        <label>Loading users...</label>
-    }
-    else if (!users.Any())
-    {
-        <label>No users, you cannot create a Todo</label>
-    }
-    else
-    {
-        <h3>Create Todo</h3>
-        <div class="form-group field">
-            <label>Title:</label>
-            <input type="text" @bind="todoTitle"/>
-        </div>
-        <div class="form-group field">
-            <label>Assignee:</label>
-            <select @bind="selectedUserId">
-                <option>Choose</option>
-                @foreach (User user in users)
-                {
-                    <option value="@user.Id">@user.UserName</option>
-                }
-            </select>
-        </div>
-        <div class="button-row">
-            @if (!string.IsNullOrEmpty(msg))
+<AuthorizeView>
+    <Authorized>
+        <div class="card">
+            @if (users == null)
             {
-                <label style="color: red">@msg</label>
+                <label>Loading users...</label>
             }
-            <button @onclick="Create" class="acceptbtn">Create</button>
+            else if (!users.Any())
+            {
+                <label>No users, you cannot create a Todo</label>
+            }
+            else
+            {
+                <h3>Create Todo</h3>
+                <div class="form-group field">
+                    <label>Title:</label>
+                    <input type="text" @bind="todoTitle"/>
+                </div>
+                <div class="form-group field">
+                    <label>Assignee:</label>
+                    <select @bind="selectedUserId">
+                        <option>Choose</option>
+                        @foreach (User user in users)
+                        {
+                            <option value="@user.Id">@user.UserName</option>
+                        }
+                    </select>
+                </div>
+                <div class="button-row">
+                    @if (!string.IsNullOrEmpty(msg))
+                    {
+                        <label style="color: red">@msg</label>
+                    }
+                    <button @onclick="Create" class="acceptbtn">Create</button>
+                </div>
+            }
         </div>
-    }
-</div>
 
-<Modal ShowModal="showModal">
-    <p>Click here</p>
-    <button @onclick="@Proceed">Done</button>
-</Modal>
+        <Modal ShowModal="showModal">
+            <p>Click here</p>
+            <button @onclick="@Proceed">Done</button>
+        </Modal>
+
+
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not logged in.</p>
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
     private IEnumerable<User>? users;

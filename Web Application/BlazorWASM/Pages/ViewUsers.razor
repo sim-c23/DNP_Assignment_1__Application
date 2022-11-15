@@ -2,7 +2,8 @@
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @inject IUserService userService
-
+<AuthorizeView>
+    <Authorized>
 <h3 style="text-align: center">Overview of all users</h3>
 
 @if (!string.IsNullOrEmpty(msg))
@@ -32,7 +33,27 @@ else
     </div>
 }
 
-@code {
+        @*<h3>Hello @context.User.Identity.Name</h3>
+        <p>@context.User.Claims.First(claim => claim.Type.Equals(ClaimTypes.Role)).Value</p>
+        <p>
+            Your claims include:
+            <ol>
+                @foreach (Claim claim in context.User.Claims)
+                {
+                    <li>
+                        <label>@claim.Type: @claim.Value</label>
+                    </li>
+                }
+            </ol>
+        </p>*@
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not logged in.</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code
+{
     private IEnumerable<User>? users;
     private string msg = "";
 

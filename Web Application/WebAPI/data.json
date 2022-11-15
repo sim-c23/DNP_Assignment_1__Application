@@ -2,8 +2,8 @@
   "Users": [
     {
       "Id": 1,
-      "UserName": "John",
-      "Password": null,
+      "UserName": "john",
+      "Password": "1234",
       "Email": null,
       "Domain": null,
       "Name": null,
