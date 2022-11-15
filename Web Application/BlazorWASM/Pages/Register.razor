@@ -1,0 +1,83 @@
+﻿@page "/Register"
+@using global::Shared.Models
+
+<h3>Register</h3>
+
+<div class="card">
+    
+    <h3>Please login</h3>
+    <div class="field">
+        <label>User name:</label>
+        <input type="text" @bind="user.UserName"/>
+    </div>
+    
+    <div class="field">
+        <label style="text-align: center">Password:</label>
+        <input type="password" @bind="user.Password"/>
+    </div>
+    
+    <div class="field">
+        <label style="text-align: center">Email:</label>
+        <input type="password" @bind="user.Email"/>
+    </div>
+   
+    <div class="field">
+        <label style="text-align: center">Name:</label>
+        <input type="password" @bind="user.Name"/>
+    </div>
+    
+    
+    <div class="field">
+        <label style="text-align: center">Role:</label>
+        <input type="password" @bind="user.Role"/>
+    </div>
+   
+    <div class="field">
+        <label style="text-align: center">Age:</label>
+        <input type="password" @bind="user.Age"/>
+    </div>
+    
+    <div class="field">
+        <label style="text-align: center">SecurityLevel:</label>
+        <input type="password" @bind="user.SecurityLevel"/>
+    </div>
+    
+    <div class="field">
+            <label style="text-align: center">Domain:</label>
+            <input type="password" @bind="user.Domain"/>
+        </div>
+    
+    @if (!string.IsNullOrEmpty(errorLabel))
+            {
+                <div class="field">
+                    <label style="color: red">
+                        @errorLabel
+                    </label>
+                </div>
+            }
+            <div class="field">
+                @*<button class="loginbtn" @onclick="LoginAsync">Log in</button>*@
+            </div>
+        </div>
+    
+@code {
+    private User user = new();
+
+    private string? errorLabel;
+    
+    /*private async Task LoginAsync()
+    {
+        errorLabel = "";
+        try
+        {
+            await authService.LoginAsync(userName, password);
+            navMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = $"Error: {e.Message}";
+        }
+    }*/
+
+}

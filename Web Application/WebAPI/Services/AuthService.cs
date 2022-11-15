@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Application.DaoInterfaces;
 using FileData.DAOs;
 using Shared.Models;
 
@@ -7,35 +8,16 @@ namespace WebApi.Services;
 public class AuthService : IAuthService
 {
 
-    private readonly IList<User> userDaos = new List<User>
-    {
-        new User
-        {
-            Age = 36,
-            Email = "test@via.dk",
-            Domain = "via",
-            Name = "Test",
-            Password = "test1234",
-            Role = "Teacher",
-            UserName = "test",
-            SecurityLevel = 4
-        },
-        new User
-        {
-            Age = 34,
-            Email = "jakob@gmail.com",
-            Domain = "gmail",
-            Name = "Jakob Rasmussen",
-            Password = "password",
-            Role = "Student",
-            UserName = "jknr",
-            SecurityLevel = 2
-        }
-    };
+    private readonly IUserDao userDao;
 
-    public Task<User> ValidateUser(string username, string password)
+    public AuthService(IUserDao userDao)
     {
-        User? existingUser = userDaos.FirstOrDefault(u => u.UserName.Equals(username, StringComparison.OrdinalIgnoreCase));
+        this.userDao = userDao;
+    }
+
+    public async Task<User> ValidateUser(string username, string password)
+    {
+        User? existingUser = await userDao.GetByUsernameAsync(username);
         if (existingUser == null)
         {
             throw new Exception("User not found");
@@ -46,11 +28,11 @@ public class AuthService : IAuthService
             throw new Exception("Password mismatch");
         }
 
-        return Task.FromResult(existingUser);
+        return existingUser;
     }
 
 
-    public Task RegisterUser(User user)
+    public async Task RegisterUser(User user)
     {
 
         if (string.IsNullOrEmpty(user.UserName))
@@ -66,9 +48,7 @@ public class AuthService : IAuthService
         
         // save to persistence instead of list
         
-        userDaos.Add(user);
-        
-        return Task.CompletedTask;
+        await userDao.CreateAsync(user);
     }
     
 }
