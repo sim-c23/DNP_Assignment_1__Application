@@ -42,8 +42,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 // adding policies
 AuthorizationPolicies.AddPolicies(builder.Services);
-
+builder.Services.AddScoped<IAuthService, AuthService>();
 var app = builder.Build();
+app.UseAuthentication();
 
 app.UseCors(x => x
     .AllowAnyMethod()

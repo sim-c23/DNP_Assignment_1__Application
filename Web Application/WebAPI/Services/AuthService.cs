@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using FileData.DAOs;
 using Shared.Models;
 
 namespace WebApi.Services;
@@ -6,17 +7,17 @@ namespace WebApi.Services;
 public class AuthService : IAuthService
 {
 
-    private readonly IList<User> users = new List<User>
+    private readonly IList<User> userDaos = new List<User>
     {
         new User
         {
             Age = 36,
-            Email = "trmo@via.dk",
+            Email = "test@via.dk",
             Domain = "via",
-            Name = "Troels Mortensen",
-            Password = "onetwo3FOUR",
+            Name = "Test",
+            Password = "test1234",
             Role = "Teacher",
-            UserName = "trmo",
+            UserName = "test",
             SecurityLevel = 4
         },
         new User
@@ -34,7 +35,7 @@ public class AuthService : IAuthService
 
     public Task<User> ValidateUser(string username, string password)
     {
-        User? existingUser = users.FirstOrDefault(u => u.UserName.Equals(username, StringComparison.OrdinalIgnoreCase));
+        User? existingUser = userDaos.FirstOrDefault(u => u.UserName.Equals(username, StringComparison.OrdinalIgnoreCase));
         if (existingUser == null)
         {
             throw new Exception("User not found");
@@ -65,7 +66,7 @@ public class AuthService : IAuthService
         
         // save to persistence instead of list
         
-        users.Add(user);
+        userDaos.Add(user);
         
         return Task.CompletedTask;
     }
