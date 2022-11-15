@@ -8,6 +8,7 @@ using BlazorWASM.StateContainer;
 using HttpClients.ClientInterfaces;
 using HttpClients.Implementations;
 using Microsoft.AspNetCore.Components.Authorization;
+using Shared.Auth;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -19,7 +20,7 @@ builder.Services.AddScoped<ITodoService, TodoHttpClient>();
 builder.Services.AddScoped<CounterStateContainer>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
 builder.Services.AddScoped<IAuthService, JwtAuthService>();
-//AuthorizationPolicies.AddPolicies(builder.Services);
+AuthorizationPolicies.AddPolicies(builder.Services);
 
 
 
