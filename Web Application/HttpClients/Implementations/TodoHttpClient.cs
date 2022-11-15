@@ -1,11 +1,11 @@
 ﻿using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
-using HttpClient.ClientInterfaces;
+using HttpClients.ClientInterfaces;
 using Shared.DTOs;
 using Shared.Models;
 
-namespace HttpClient.Implementations;
+namespace HttpClients.Implementations;
 
 public class TodoHttpClient : ITodoService
 {

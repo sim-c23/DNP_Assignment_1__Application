@@ -4,13 +4,19 @@ using System.Text;
 using System.Text.Json;
 using Shared.Models;
 using Shared.Dtos;
+using System.Net.Http;
 
 
 namespace BlazorWasm.Services.Http;
 
 public class JwtAuthService : IAuthService
 {
-    private readonly System.Net.Http.HttpClient client = new ();
+    private readonly HttpClient client;
+
+    public JwtAuthService(HttpClient client)
+    {
+        this.client = client;
+    }
 
     // this private variable for simple caching
     public static string? Jwt { get; private set; } = "";

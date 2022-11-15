@@ -1,7 +1,7 @@
 ﻿using Shared.DTOs;
 using Shared.Models;
 
-namespace HttpClient.ClientInterfaces;
+namespace HttpClients.ClientInterfaces;
 
 public interface IUserService
 {
