@@ -109,7 +109,46 @@
       "Role": "teacher",
       "Age": 36,
       "SecurityLevel": 1
+    },
+    {
+      "Id": 11,
+      "UserName": "string1",
+      "Password": "string1",
+      "Email": "string1",
+      "Domain": "string1",
+      "Name": "string1",
+      "Role": "string1",
+      "Age": 1,
+      "SecurityLevel": 1
+    },
+    {
+      "Id": 12,
+      "UserName": "hej1",
+      "Password": "hej123",
+      "Email": "string",
+      "Domain": "string",
+      "Name": "string",
+      "Role": "string",
+      "Age": 3,
+      "SecurityLevel": 3
     }
   ],
-  "Todos": []
+  "Todos": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 11,
+        "UserName": "string1",
+        "Password": "string1",
+        "Email": "string1",
+        "Domain": "string1",
+        "Name": "string1",
+        "Role": "string1",
+        "Age": 1,
+        "SecurityLevel": 1
+      },
+      "Title": "hej",
+      "IsCompleted": true
+    }
+  ]
 }
