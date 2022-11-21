@@ -1,5 +1,8 @@
 ﻿@page "/Register"
+@using BlazorWasm.Services
+@inject IAuthService authService
 @using global::Shared.Models
+@inject NavigationManager navmgr
 
 <h3>Register</h3>
 
@@ -18,33 +21,33 @@
     
     <div class="field">
         <label style="text-align: center">Email:</label>
-        <input type="password" @bind="user.Email"/>
+        <input type="text" @bind="user.Email"/>
     </div>
    
     <div class="field">
         <label style="text-align: center">Name:</label>
-        <input type="password" @bind="user.Name"/>
+        <input type="text" @bind="user.Name"/>
     </div>
     
     
     <div class="field">
         <label style="text-align: center">Role:</label>
-        <input type="password" @bind="user.Role"/>
+        <input type="text" @bind="user.Role"/>
     </div>
    
     <div class="field">
         <label style="text-align: center">Age:</label>
-        <input type="password" @bind="user.Age"/>
+        <input type="text" @bind="user.Age"/>
     </div>
     
     <div class="field">
         <label style="text-align: center">SecurityLevel:</label>
-        <input type="password" @bind="user.SecurityLevel"/>
+        <input type="text" @bind="user.SecurityLevel"/>
     </div>
     
     <div class="field">
             <label style="text-align: center">Domain:</label>
-            <input type="password" @bind="user.Domain"/>
+            <input type="text" @bind="user.Domain"/>
         </div>
     
     @if (!string.IsNullOrEmpty(errorLabel))
@@ -56,28 +59,31 @@
                 </div>
             }
             <div class="field">
-                @*<button class="loginbtn" @onclick="LoginAsync">Log in</button>*@
+                <button class="loginbtn" @onclick="RegisterAsync">Log in</button>
             </div>
         </div>
     
 @code {
     private User user = new();
-
-    private string? errorLabel;
     
-    /*private async Task LoginAsync()
+    private string userName;
+    private string password;
+    
+    
+    private string errorLabel;
+
+    private async Task RegisterAsync()
     {
         errorLabel = "";
         try
         {
-            await authService.LoginAsync(userName, password);
-            navMgr.NavigateTo("/");
+            await authService.RegisterAsync(user);
+            navmgr.NavigateTo("/");
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             errorLabel = $"Error: {e.Message}";
         }
-    }*/
-
+    }
 }

@@ -131,6 +131,28 @@
       "Role": "string",
       "Age": 3,
       "SecurityLevel": 3
+    },
+    {
+      "Id": 13,
+      "UserName": "string12",
+      "Password": "string12",
+      "Email": "string12",
+      "Domain": "string12",
+      "Name": "string12",
+      "Role": "string12",
+      "Age": 12,
+      "SecurityLevel": 2
+    },
+    {
+      "Id": 14,
+      "UserName": "hej1234",
+      "Password": "hej1234",
+      "Email": "hej1234",
+      "Domain": "123",
+      "Name": "hej1234",
+      "Role": "hej1234",
+      "Age": 12,
+      "SecurityLevel": 3
     }
   ],
   "Todos": [
