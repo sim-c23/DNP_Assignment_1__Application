@@ -153,6 +153,28 @@
       "Role": "hej1234",
       "Age": 12,
       "SecurityLevel": 3
+    },
+    {
+      "Id": 15,
+      "UserName": "Simon",
+      "Password": "1234",
+      "Email": "em@l.dk",
+      "Domain": "google.dk",
+      "Name": "Simon",
+      "Role": "t",
+      "Age": 12,
+      "SecurityLevel": 2
+    },
+    {
+      "Id": 16,
+      "UserName": "treols",
+      "Password": "1234",
+      "Email": "troels",
+      "Domain": "sdf",
+      "Name": "fdsf",
+      "Role": "dghjh",
+      "Age": 36,
+      "SecurityLevel": 8
     }
   ],
   "Todos": [

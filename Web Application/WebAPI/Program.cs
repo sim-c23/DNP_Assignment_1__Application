@@ -2,12 +2,12 @@ using System.Text;
 using Application.DaoInterfaces;
 using Application.Logic;
 using Application.LogicInterfaces;
-using FileData;
-using FileData.DAOs;
-using Shared.Auth;
-using WebApi.Services;
+using EfcDataAccess;
+using EfcDataAccess.DAOs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Shared.Auth;
+using WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +18,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<FileContext>();
-builder.Services.AddScoped<IUserDao, UserFileDao>();
+builder.Services.AddDbContext<TodoContext>();
+builder.Services.AddScoped<IUserDao, UserEfcDao>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
 
-builder.Services.AddScoped<ITodoDao, TodoFileDao>();
+builder.Services.AddScoped<ITodoDao, TodoEfcDao>();
 builder.Services.AddScoped<ITodoLogic, TodoLogic>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
