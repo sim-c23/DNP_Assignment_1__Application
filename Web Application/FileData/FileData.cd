@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FileData.DAOs.TodoFileDao" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIIAAIIA=</HashCode>
+      <FileName>DAOs\TodoFileDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FileData.DAOs.UserFileDao" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAIAg=</HashCode>
+      <FileName>DAOs\UserFileDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FileData.DataContainer">
+    <Position X="8" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DataContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileData.FileContext">
+    <Position X="2" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAACAAAAQQAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAA=</HashCode>
+      <FileName>FileContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

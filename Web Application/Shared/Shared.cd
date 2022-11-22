@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Shared.Auth.AuthorizationPolicies">
+    <Position X="12" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auth\AuthorizationPolicies.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.DTOs.SearchTodoParametersDto">
+    <Position X="0.5" Y="1" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAYAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\SearchTodoParametersDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.DTOs.SearchUserParametersDto">
+    <Position X="7.75" Y="1" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\SearchUserParametersDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.DTOs.TodoBasicDto">
+    <Position X="0.5" Y="3.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAAAAAAAAgAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\TodoBasicDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.DTOs.TodoCreationDto">
+    <Position X="5.75" Y="3.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\TodoCreationDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.DTOs.TodoUpdateDto">
+    <Position X="9.25" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\TodoUpdateDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.DTOs.UserCreationDto">
+    <Position X="0.5" Y="6" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DTOs\UserCreationDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Dtos.UserLoginDto">
+    <Position X="9.5" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\UserLoginDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Models.Todo">
+    <Position X="16" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Todo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Models.User">
+    <Position X="15.5" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAEEAAAAQAAgAAAAACIQAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

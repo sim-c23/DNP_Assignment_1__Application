@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Application.Logic.TodoLogic" BaseTypeListCollapsed="true">
+    <Position X="6" Y="6.25" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAIAAAgAAAAAIIAAoIA=</HashCode>
+      <FileName>Logic\TodoLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Application.Logic.UserLogic" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="6.25" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIIAAAAA=</HashCode>
+      <FileName>Logic\UserLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Application.DaoInterfaces.ITodoDao">
+    <Position X="6.5" Y="1.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIIAAIIA=</HashCode>
+      <FileName>DaoInterfaces\ITodoDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Application.DaoInterfaces.IUserDao">
+    <Position X="6.5" Y="4" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAIAg=</HashCode>
+      <FileName>DaoInterfaces\IUserDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Application.LogicInterfaces.ITodoLogic">
+    <Position X="12.75" Y="1.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIIAAIIA=</HashCode>
+      <FileName>LogicInterfaces\ITodoLogic.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Application.LogicInterfaces.IUserLogic">
+    <Position X="12.75" Y="4" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAAA=</HashCode>
+      <FileName>LogicInterfaces\IUserLogic.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>
