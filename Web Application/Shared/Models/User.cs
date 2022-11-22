@@ -22,8 +22,6 @@ public class User
    
     public int SecurityLevel { get; set; }
     
-    /*/*Todo Ved ikke om dette skal være med. Se Troles: Todo App Part 3 - EFC --> (9 Configuring Relationships)#1#
-    [JsonIgnore]/*Todo kan finders under Tilføj bruger 13 Næste problem#1#
-    public ICollection<Todo> Todos { get; set; }*/
+   
 
 }

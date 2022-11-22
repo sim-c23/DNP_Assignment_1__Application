@@ -5,7 +5,7 @@ using BlazorWASM;
 using BlazorWasm.Auth;
 using BlazorWasm.Services;
 using BlazorWasm.Services.Http;
-using BlazorWASM.StateContainer;
+
 using EfcDataAccess;
 using EfcDataAccess.DAOs;
 using FileData.DAOs;
@@ -21,7 +21,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7024") });
 builder.Services.AddScoped<IUserService, UserHttpClient>();
 builder.Services.AddScoped<ITodoService, TodoHttpClient>();
-builder.Services.AddScoped<CounterStateContainer>();
+
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
 builder.Services.AddScoped<IAuthService, JwtAuthService>();
 
